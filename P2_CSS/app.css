@@ -1,0 +1,33 @@
+h1 {
+  color: #AF1239;
+  /* border-color: purple;
+  border-width: 5px;
+  border-style: dashed; */
+  border: 1px solid rgba(100, 100, 100, 0.1);
+}
+li {
+  color: cornflowerBlue;
+  border: 2px solid red
+}
+h3 {
+  color: rgba(100, 100, 100, 0.5);
+  background: rgba(100, 100, 100, 0.5);
+}
+h4 {
+  color: rgb(10, 200, 10);
+}
+div {
+  background: rgba(100, 100, 100, 0.3);
+}
+body {
+  background: pink;
+  /* background: url(https://www.google.com/logos/doodles/2017/jan-ingenhouszs-287th-birthday-5733919419793408.3-l.png);
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+#special {
+  color: yellow;
+}
+.whatIHate {
+  text-decoration: line-through;
+}
