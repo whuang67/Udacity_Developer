@@ -1,36 +1,28 @@
 // Question 1
-var num = -10;
 console.log("This is the answer of Question 1.");
-while(num <= 19){
+for(num = -10; num <= 19; num++){
 	console.log(num);
-	num++;
 }
 
 // Question 2
-var num = 10;
 console.log("This is the answer of Question 2.");
-while(num <= 40){
+for(var num = 10; num <= 40; num += 2){
 	console.log(num);
-	num += 2;
 }
 
 
 // Question 3
-var num = 300;
 console.log("This is the answer of Question 3.");
-while(num <= 333){
+for(var num = 300; num <= 333; num++){
 	if(num % 2 == 1){
 		console.log(num);
 	}
-	num++;
 }
 
 // Question 4
-var num = 5;
 console.log("This is the answer of Question 4.");
-while(num <= 50){
+for(var num = 5; num <= 50; num++){
 	if(num % 5 == 0 && num % 3 == 0){
 		console.log(num);
 	}
-	num++;
 }
