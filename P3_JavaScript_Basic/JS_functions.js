@@ -123,3 +123,12 @@ var obj = {
 	}
 }
 obj.add(5, 10);
+
+var comments = {};
+comments.data = ["Good job", "Bye", "Lame..."];
+comments.print = function(arr){
+    this.data.forEach(function(el){
+	    console.log(el);    
+    });
+}
+comments.print();
