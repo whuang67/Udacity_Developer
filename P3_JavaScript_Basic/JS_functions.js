@@ -27,3 +27,29 @@ var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3); //["Orange", "Lemon"]
 var nums = [1, 2, 3];
 var otherNums = nums.slice();    //Copy the entire array
+
+// To loop over an array using a For loop, we need to make use of the array's length property:
+var colors = ["red", "orange", "yellow", "green"];
+for(var i = 0; i < colors.length; i++){
+	console.log(colors[i]);
+}
+
+// JavaScript provides an easy built-in way of iterating over an array: .forEach()
+// Usage: arr.forEach(function(value, index, array)); 
+var colors = ["red", "orange", "yellow", "green"];
+colors.forEach(function(color){
+	console.log(color);
+});
+
+// Exercise of For loop and forEach():
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numbers.forEach(function(num){
+	if(num % 3 ==0){
+		console.log(num);
+	}
+});
+for(i = 0; i < numbers.length; i++){
+	if(numbers[i] % 3 == 0){
+		console.log(numbers[i]);
+	}
+}
