@@ -4,5 +4,6 @@ Please install package `express` before trying to run the applications here.
 ```bash
 npm init
 npm install express --save
+npm install ejs --save
 node app1.js
 ```
