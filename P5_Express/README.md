@@ -9,8 +9,6 @@ Please install package `express` before trying to run the applications here.
 
 ```bash
 npm init
-npm install express --save
-npm install ejs --save
-npm install body-parser --save
+npm install --save express ejs body-parser
 node app1.js
 ```
