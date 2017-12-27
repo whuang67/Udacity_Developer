@@ -1,6 +1,12 @@
+## Contents
+- app1: basic `express` package
+- app2: basic `express` package with JS
+- app3: `express` package with EJS
+- app4: post request
+
+## Code
 Please install package `express` before trying to run the applications here. 
 
-## Example
 ```bash
 npm init
 npm install express --save
