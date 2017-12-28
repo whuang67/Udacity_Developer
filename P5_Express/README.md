@@ -4,6 +4,8 @@
 - app3: `express` package with EJS
 - app4: post request
 - app5: movie search application
+- YelpCampApp_version1: Basic version (with default data; new data can be added but cannot be saved)
+- YelpCampApp_version2: Advanced version (with **MongoDB**; new data can be both added and saved)
 
 ## Code
 
@@ -13,6 +15,12 @@ Please install package `express` before running the applications here.
 npm init
 npm install --save express ejs body-parser request
 node app1.js
+```
+
+If running `YelpCampApp_versioin2`, **MongoDB** should also be installed in addition to those above.
+
+```bash
+npm install mongoose --save
 ```
 
 ## MongoDB Instructions
