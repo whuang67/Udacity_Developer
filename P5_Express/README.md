@@ -115,3 +115,21 @@ processManagement:
 net:
   port: 27017
   bindIp: 127.0.0.1  # Listen to local interface only, comment to listen on all interfaces.
+
+
+#security:
+
+#operationProfiling:
+
+#replication:
+
+#sharding:
+
+## Enterprise-Only Options
+
+#auditLog:
+
+#snmp:
+```
+
+- Now save the file and enter `sudo mv mongod.conf /etc/mongod.conf` in the terminal
