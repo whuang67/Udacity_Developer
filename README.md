@@ -11,5 +11,5 @@ git commit -m "blah blah"              # Add a commit
 
 git log                                # Check the log, typing "q" to get out
 git checkout commitId                  # Check an old one out
-git revert --no-commit commitId..HEAD  # Revert to an old version
+git revert --no-commit commitId..HEAD  # Revert to an old commit from a current state
 ```
