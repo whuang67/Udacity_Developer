@@ -17,10 +17,10 @@ npm install --save express ejs body-parser request
 node app1.js
 ```
 
-If running `YelpCampApp_versioin2`, **MongoDB** should also be installed in addition to those above.
+If running `YelpCampApp_versioin2`, **MongoDB** should also be installed in addition to those above. The `mongoose` library is keeping being updated (5.x.x currently).
 
 ```bash
-npm install mongoose --save
+npm install mongoose@4.13.8 --save
 ```
 
 ## MongoDB Instructions
