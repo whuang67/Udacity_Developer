@@ -7,20 +7,20 @@
 - YelpCampApp_version1: Basic version (with default data; new data can be added but cannot be saved)
 - YelpCampApp_version2: Advanced version (with **MongoDB**; new data can be both added and saved)
 
-## Code
+## Command line
 
 Please install package `express` before running the applications here. 
 
 ```bash
-npm init
-npm install --save express ejs body-parser request
-node app1.js
+npm init                                               # Initialize
+npm install --save express ejs body-parser request     # Install necessary pacakges
+node app1.js                                           # Launch the package
 ```
 
 If running `YelpCampApp_versioin2`, **MongoDB** should also be installed in addition to those above. The `mongoose` library is keeping being updated (5.x.x currently).
 
 ```bash
-npm install mongoose@4.13.8 --save
+npm install mongoose@4.13.8 --save                     # Install the mongoose package
 ```
 
 ## MongoDB Instructions
