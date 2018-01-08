@@ -4,6 +4,7 @@
 - app3: `express` package with EJS
 - app4: post request
 - app5: movie search application
+- app6: mongoDB
 - YelpCampApp_version1: Basic version (with default data; new data can be added but cannot be saved)
 - YelpCampApp_version2: Advanced version (with **MongoDB**; new data can be both added and saved)
 
