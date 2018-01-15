@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circles</title>
+  <script type="text/javascript" src="dist/paper-full.js"></script>
+  <script type="text/javascript" src="aaa.js"></script>
+  <link rel="stylesheet" type="text/css" href="circles.css">
+  <script type="text/paperscript" canvas="myCanvas">
+    function randomNumber(min, max) {
+	    return Math.round((max-min)*Math.random() + min);
+	}
+	function numberFound(randomNumber, numberArray) {
+	    for(var i = 0; i < numberArray.length; i++) {
+		    if(numberArray[i] === undefined) {
+			    return false;
+			} else if(randomNumber === Number(numberArray[i].content)) {
+			    return true;
+			}
+		}
+		return false;
+	}
+    function createUniqueRandomArray(num_elements, min, max) {
+	    if(num_elements > (max-min)) { num_elements = max-min; }
+	    var temp;
+		var text = new Array(num_elements);
+		var i = 0;
+		while(i < num_elements) {
+		    temp = randomNumber(min, max);
+			if(numberFound(temp, text) === false) {
+				
+				text[i] = new PointText({
+				    point: new Point(60*i+100, 300),
+					justification: "center",
+					// fontSize: 30,
+					fillColor: "white"
+				});
+				text[i].fontSize = temp*3+15;
+				text[i].content = temp;
+				i++;
+			}
+		}
+		return text;
+	}
+	
+	array = createUniqueRandomArray(11, 0, 13);
+	
+	function bubbleSort(i, j) {
+	    setTimeout(function(){
+	        if(Number(array[i].content) < Number(array[j].content)) {
+		        var tempPosition, temp;
+		        temp = array[i];
+		        array[i] = array[j];
+		        array[j] = temp;
+		        tempPosition = array[i].position;
+		        array[i].position = array[j].position;
+		        array[j].position = tempPosition;
+		    }
+		    j++;
+		    if(j < i) {
+		        bubbleSort(i, j);
+		    } else if(i>=1) {
+		        i--;
+			    j = 0;
+			    bubbleSort(i, j);
+		    }
+		}, 200);
+	}
+	
+	function selectionSort(i, j, positionOfMax) {
+	    setTimeout(function(){
+		    var tempPosition, temp;
+		    if(Number(array[j].content) > Number(array[positionOfMax].content)) {
+			    positionOfMax = j;
+			}
+			j++;
+			if(j <= i) {
+			    selectionSort(i, j, positionOfMax);
+			} else if(i>=1) {
+			    temp = array[i];
+		        array[i] = array[positionOfMax];
+		        array[positionOfMax] = temp;
+		        tempPosition = array[i].position;
+		        array[i].position = array[positionOfMax].position;
+		        array[positionOfMax].position = tempPosition;
+			    i--;
+				j = 1;
+				positionOfMax = 0;
+				selectionSort(i, j, positionOfMax);
+			}
+		}, 200);
+	}
+
+	
+	function onKeyDown(event) {
+	    var i, j;
+	    if(event.key == 1) {
+		    i = array.length-1;
+	        j = 0;
+		    bubbleSort(i, j);
+		} else if(event.key == 2) {
+		    var positionOfMax = 0
+		    i = array.length-1;
+			j = 1;
+			selectionSort(i, j, positionOfMax);
+		}
+	}
+  </script>
+</head>
+<body>
+  <p>Press 1 to visualize Bubble Sort, and 2 for Selection Sort</p>
+  <canvas id="myCanvas"></canvas>
+</body>
+</html>
