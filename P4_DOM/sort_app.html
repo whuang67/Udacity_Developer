@@ -2,9 +2,21 @@
 <html>
 <head>
   <title>Circles</title>
+  <!-- PaperJS library -->
   <script type="text/javascript" src="dist/paper-full.js"></script>
   <script type="text/javascript" src="aaa.js"></script>
-  <link rel="stylesheet" type="text/css" href="circles.css">
+  <style>
+    canvas {
+	    width: 100%;
+	    height: 100%;
+	    background: black;
+    }
+
+    body, html {
+	    height: 100%;
+	    margin: 0;
+    }
+  </style>
   <script type="text/paperscript" canvas="myCanvas">
     function randomNumber(min, max) {
 	    return Math.round((max-min)*Math.random() + min);
@@ -29,7 +41,7 @@
 			if(numberFound(temp, text) === false) {
 				
 				text[i] = new PointText({
-				    point: new Point(60*i+100, 300),
+				    position: new Point(60*i+100, 300),
 					justification: "center",
 					// fontSize: 30,
 					fillColor: "white"
