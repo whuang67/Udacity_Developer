@@ -1,5 +1,7 @@
 # Web_Developer
-This repository includes `HTML`, `CSS`, `ejs` and `JavaScript` files. Files from P1 to P4 are about front-end. Files after that are about back-end. 
+This repository includes `HTML`, `CSS`, and `JavaScript` files. Files from P1 to P4 are about front-end. Files after that are about back-end. 
+
+For backend-related parts (after P5_Express), more detailed information can be found in children folders' `README.md`'s. 
 
 ## git command line
 
