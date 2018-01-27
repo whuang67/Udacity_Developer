@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Translate</title>
+	<style type='text/css'>
+	p {
+		width: 50px;
+		height: 50px;
+		background-color: #1ABC9C;
+		color: white;
+	}
+	p.move-right {
+		background-color: #3498DB;
+		transform: translateX(100px);
+	}
+	p.move-down {
+		background-color: #F1C404;
+		transform: translateY(20px);
+	}
+	p:hover {
+		transform: translate(20px, 20px);
+	}
+	.transformedScale {
+		background-color: #3498DB;
+		transform: scale(2);  /* scaleX(), scaleY() */
+		border: 2px solid #2C3E50;
+		transform-origin: left top;
+		/* transform-origin: 0 0; left, center */
+	}
+	.transformedRotate {
+		background-color: #9B59B6;
+		transform: rotate(45deg) scale(1.2);
+		border: 2px solid #2C3E50;
+		transform-origin: left bottom;
+	}
+	</style>
+</head>
+<body>
+	<p></p>
+	<p class='move-right'></p>
+	<p></p>
+	<p class='move-down'></p>
+	<p class='transformedScale'>Hello</p>
+	<p class='transformedRotate'>Hello</p>
+	
+</body>
+</html>

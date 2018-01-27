@@ -1,0 +1,71 @@
+body {
+	margin: 0 0 0 0;
+	background-color: #2c3e50;
+	animation-name: cycleSkyColors;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+.grass {
+	background-color: green;
+	height: 600px;
+	width: 100%;
+	position: absolute;
+}
+
+.sun {
+	background-color: #f1c40f;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	animation-name: sunMotion;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+@keyframes cycleSkyColors {
+	0% {
+		background-color: black;
+	}
+	10% {
+		background-color: pink;
+	}
+	30% {
+		background-color: blue;
+	}
+	70% {
+		background-color: blue;
+	}
+	90% {
+		background-color: pink;
+	}
+	100% {
+		background-color: black;
+	}
+}
+@keyframes sunMotion {
+	0% {
+		transform: translate(0px, 100px);
+		background-color: orange;
+	}
+	25% {
+		transform: translate(250px, 0px);
+		background-color: yellow;
+	}
+	50% {
+		transform: translate(500px, -50px);
+		background-color: yellow;
+	}
+	75% {
+		transform: translate(750px, 0px);
+		background-color: yellow;
+	}
+	100% {
+		transform: translate(1000px, 100px);
+		background-color: red;
+	}
+}

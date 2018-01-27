@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Keyframes</title>
+	<style type='text/css'>
+	@keyframes rainbowtext {
+		0% {
+			color: red;
+			font-size: 20px;
+		}
+		25% {
+			color: orange;
+		}
+		50% {
+			color: yellow;
+			font-size: 40px;
+			transform: translateX(200px);
+		}
+		75% {
+			color: green;
+		}
+		100% {
+			color: blue;
+			font-size: 20px;
+		}
+	}
+	@keyframes test {
+		100% {
+			transform: translateX(200px);
+			font-size: 30px;
+		}
+	}
+	
+	.basic {
+		animation-name: rainbowtext;
+		animation-duration: 3s;
+		animation-time-function: linear;
+		animation-delay: 0s;
+		animation-iteration-count: infinite;
+	}
+	
+	.test {
+		animation-name: test;
+		animation-duration: 1s;
+		animation-time-function: linear;
+		animation-delay: 0s;
+		
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}
+	test:hover {
+		animation-play-state: paused;
+	}
+	
+	/*
+	animation-direction: forward reverse alternate;
+	animation-iteration-count: 1 7 infinite;
+	animation-fill-mode: forwards backwards both none;
+	animation-play-state: running paused;
+	*/
+	</style>
+</head>
+<body>
+	<div style='height: 200px'>
+		<p class='basic'>Hello!</p>
+		<p class='basic'>How are you!</p>
+	</div>
+	<p class='test'>Test</p>
+</body>
+</html>
