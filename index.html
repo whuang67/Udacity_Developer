@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type='text/css'>
+		input[type='number'] {
+			width: 40px;
+		}
+	</style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+	<div class="shifts"></div>
+	<input type="button" value="Add Another Shift", id="addShift">
+	<input type="button" value="Submit" id="submit">
+	<input type="button" value="Reset" id="reset">
+	<h2>You spent <span id='totalTime'>0</span> hour(s) on the project!</h2>
+	<script type="text/javascript">
+		$("#addShift").on("click", function(){
+			$(".shifts").append("<div><strong>Shift: </strong> <input type='button' value='Remove This Shift' class='removeShift'><div>Start Time:<input type='number' class='sh' min='0' max='23'>:<input type='number' class='sm' min='0' max='59'>:<input type='number' class='ss' min='0' max='59'> End Time:<input type='number' class='eh' min='0' max='23'>:<input type='number' class='em' min='0' max='59'>:<input type='number' class='es' min='0' max='59'> Overnight Running?: <input type='checkbox'></div><br/></div>");
+		});
+		$(".shifts").on("click", ".removeShift", function(){
+			$(this).parent().remove();
+		});
+		$("#submit").on("click", function(){
+			var start=0;
+			var end=0;
+			var temp_start=0;
+			var temp_end=0;
+			var warning=false;
+			for(var i=0; i<$(".sh").length; i++){
+				temp_start = 3600*Number($(".sh").eq(i).val())+60*Number($(".sm").eq(i).val())+Number($(".ss").eq(i).val());
+				temp_end = 3600*Number($(".eh").eq(i).val())+60*Number($(".em").eq(i).val())+Number($(".es").eq(i).val());
+				if($("input[type='checkbox']").eq(i).is(":checked")){temp_end += 86400;}
+				if(temp_end <= temp_start){
+					$("strong").eq(i).css("color", "red");
+					warning=true;
+					continue;
+				}
+				start += temp_start;
+				end += temp_end;
+				$("strong").eq(i).css("color", "black");
+			}
+			if(warning){alert("Please take a look at the RED WARNINGS! The RED were not added!");}
+			$("#totalTime").text(roundTo((end-start)/3600));
+		});
+		$("#reset").on("click", function(){
+			$(".shifts").children().remove();
+		});
+		function roundTo(number){return(Math.ceil(number*4)/4);}
+	</script>
+	
+</body>
+</html>
