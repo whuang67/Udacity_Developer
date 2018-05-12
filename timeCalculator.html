@@ -47,7 +47,8 @@ $("input[value='Submit']").on("click", function(){
 	}
 	var output=0, temp=0, warning=false;
 	for(var i=0; i<total; i++){
-		temp = countSeconds($(".eh").eq(i).val(), $(".em").eq(i).val(), $(".es").eq(i).val())-countSeconds($(".sh").eq(i).val(), $(".sm").eq(i).val(), $(".ss").eq(i).val());
+		temp = countSeconds($(".eh").eq(i).val(), $(".em").eq(i).val(), $(".es").eq(i).val())-
+			countSeconds($(".sh").eq(i).val(), $(".sm").eq(i).val(), $(".ss").eq(i).val());
 		if($("input[type='checkbox']").eq(i).is(":checked")){temp += 86400;}
 		if(temp<=0){
 			$("input[value='Remove This Shift']").eq(i).css({"color": "red", "font-weight": "bold"});
